@@ -1,0 +1,18 @@
+from IPython.display import Code
+
+import gdsfactory as gf
+
+filepath = "yaml_pics/pads.pic.yml"
+Code(filepath, language="yaml+jinja")
+
+
+import os
+
+filepath = "yaml_pics/mmis.pic.yml"
+
+# Check if the file exists
+if not os.path.isfile(filepath):
+    print(f"Error: File {filepath} does not exist.")
+else:
+    print(f"File {filepath} found.")
+
